@@ -27,11 +27,11 @@ function setup(){
   ellipse(290, 90, 130);
   fill(255);
   ellipse(288, 98, 122);
-  fill(0);
+  fill(gray);
   textSize(35);
   textFont("serif");
   text("KOBE", 238, 95);
-  fill(0);
+  fill(gray);
   textSize(13);
   textFont("serif");
   text("UNIVERSITY", 262, 113);
