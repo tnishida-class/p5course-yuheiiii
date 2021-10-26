@@ -1,9 +1,14 @@
 function setup() {
+  createCanvas(400, 400);
+}
+
+function draw(){
+
   const green = color(0, 255, 0);
   const red = color(255, 0, 0);
   const black = color(0);
   const cream = color(242, 212, 147);
-  createCanvas(400, 400);
+
   background(255);
   stroke(255);
   strokeWeight(3);
