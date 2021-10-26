@@ -1,8 +1,10 @@
 // ギリシャ国旗
 function setup() {
-  const blue = color(0, 51, 160);
   createCanvas(270, 180);
+}
   // noStroke();
+function draw(){
+  const blue = color(0, 51, 160);
   background(255);
 
   let d = height / 9; // 縞1本の太さ
