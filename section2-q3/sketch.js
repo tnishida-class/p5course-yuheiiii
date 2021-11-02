@@ -8,7 +8,7 @@ function draw(){
   const red = color(255, 0, 0);
   const black = color(0);
   const cream = color(242, 212, 147);
-
+  
   background(255);
   stroke(255);
   strokeWeight(3);

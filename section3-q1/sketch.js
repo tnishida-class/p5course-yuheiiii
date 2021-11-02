@@ -22,7 +22,7 @@ function draw(){
 
   ellipse(x, y, size);
 
-  if(mouseIsPressed){
+  if(keyIsDown(" ".charCodeAt(0))){
    minus = 3;
  } else {
   minus = 1;
@@ -33,8 +33,5 @@ function draw(){
   } else if(size > 50) {
     size -= minus;
   }
-
-  if(keyIsDown(LEFT_ARROW)){ x -= 2; }
-  if(keyIsDown(RIGHT_ARROW)){ x += 2; }
 
 }
