@@ -8,6 +8,7 @@ function setup(){
 }
 
 function balloon(t, x, y, backgroundColor, textColor){
+  push();
   let w = textWidth(t);
   let h = textAscent() + textDescent();
   let p = 2;
@@ -16,4 +17,5 @@ function balloon(t, x, y, backgroundColor, textColor){
   triangle(x + 10, y + h, x + 40, y + h, x + 5, y + h + 20);
   fill(textColor);
   text(t, x, y + 15);
+  pop();
 }
