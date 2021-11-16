@@ -2,11 +2,13 @@
 // 練習問題：このプログラムを改造してEUの旗を描いてみよう
 function setup(){
   createCanvas(200, 200);
-  background(192);
+  background(0, 0, 255);
+  noStroke();
   for(let i = 0; i < 12; i++){
     let theta = TWO_PI * i / 12;
     let x = 100 + cos(theta) * 50;
     let y = 100 + sin(theta) * 50;
+    fill(255, 217, 0);
     star(x, y, 10);
   }
 }
