@@ -20,5 +20,10 @@ function setup(){
   let px, py; // 線を引くために一つ前の点を覚えておく変数
   for(let i = 0; i < scores.length; i++){
     // BLANK[1]
+    strokeWeight(10);
+    point((i + 0.5) * dx, height - height * scores[i] / 100);
+    py = height - height * scores[i - 1] / 100;
+    strokeWeight(2);
+    line((i - 0.5) * dx, py, (i + 0.5) *dx, height - height * scores[i] / 100);
   }
 }
