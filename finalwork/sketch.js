@@ -9,7 +9,7 @@ let cover;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-  cover = windowHeight - 650;
+  cover = windowHeight - 550;
 }
 
 
@@ -18,19 +18,27 @@ function draw(){
   push();
   background(160, 192, 255);
   textAlign(CENTER);
-  textSize(70);
-  text("ウェイソンの4枚カード問題", width / 2, 100);
+  textSize(55);
+  text("ウェイソンの4枚カード問題", width / 2, 80);
+  fill(255);
+  stroke(0, 0, 255);
+  strokeWeight(3);
+  rect((width / 2) -530, 120, 1050, 160);
+  rect((width / 2) -530, 560, 1050, 220);
+  fill(0);
+  noStroke();
   textAlign(LEFT);
-  textSize(30);
+  textSize(23);
   textWrap(CHAR)
-  text("テーブルの上にE, 7, K, 4と書かれた4枚のカードがある。カードの片面にはアルファベットが、もう片面には数字が書かれている。この時、「母音の裏面には、偶数が書かれている」という仮説が正しいか確かめたい。最低、どのカードをめくって調べればよいか選びなさい。", (width / 2) -610, 170, 1200);
-  text("＜ 解説 ＞", (width / 2) -610, 700);
-  text("正解は「E」と「7」であるが、多くの人が「7」ではなく、「4」を選んでしまう。今回の問題では、母音の裏面が偶数であればいいため、偶数の裏面が何であるかは関係ない。一方、奇数である「7」の裏面が母音の場合、「母音の裏面は偶数」という仮説が誤りとなるため、確認する必要がある。このように、人間には「自分の先入観や考えを肯定するために、都合の良い情報のみを集めて、反証を無視しようとする」傾向があり、これを確証バイアスという。",(width / 2) -610, 730, 1200);
+  text("＜ 問題 ＞", (width / 2) -500, 155);
+  text("テーブルの上にE, 7, K, 4と書かれた4枚のカードがある。カードの片面にはアルファベットが、もう片面には数字が書かれている。この時、「母音の裏面には、偶数が書かれている」という仮説が正しいか確かめたい。最低、どのカードをめくって調べればよいか選びなさい。", (width / 2) -500, 168, 1000);
+  text("＜ 解説 ＞", (width / 2) -500, 595);
+  text("正解は「E」と「7」であるが、多くの人が「7」ではなく、「4」を選んでしまう。今回の問題では、母音の裏面が偶数であればいいため、偶数の裏面が何であるかは関係ない。一方、奇数である「7」の裏面が母音の場合、「母音の裏面は偶数」という仮説が誤りとなるため、確認する必要がある。このように、人間には「自分の先入観や考えを肯定するために、都合の良い情報のみを集めて、反証を無視しようとする」傾向があり、これを確証バイアスという。",(width / 2) -500, 610, 1000);
   for(let i = 0; i < cards.length; i ++){
     card(cards[i].t, cards[i].cx, cards[i].stroke, cards[i].tx, cards[i].red, cards[i].green, cards[i].blue,);
   }
   fill(160, 192, 255);
-  rect(0, 650, width, cover);
+  rect(0, 550, width, cover);
   pop();
 }
 
@@ -97,11 +105,11 @@ function card(t, x, r, tx, red, green, blue){
   fill(red, green, blue);
   stroke(255, 0, 0);
   strokeWeight(r);
-  rect( (width / 2) + x, 400, 120, 200);
+  rect( (width / 2) + x, 320, 120, 200);
   fill(0);
   textSize(70);
   noStroke();
-  text(t, (width / 2) + tx + 40, 530);
+  text(t, (width / 2) + tx + 40, 450);
 }
 
 function windowResized(){
